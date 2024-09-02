@@ -40,17 +40,28 @@ nav {
 .nav-button li:hover {
   color: #04aa6d;
 }
-.first-banner {
+.mood-switch img {
+  height: 20px;
+  cursor: pointer;
+  padding: 7px;
+  border: 2px solid rgba(0, 0, 0, 0);
+  border-radius: 45px;
+}
+.mood-switch img:hover {
+  border: 2px solid black;
+  border-radius: 45px;
+}
+.home {
   margin: 100px 10px;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
 }
 
-.left {
-  line-height: 70px;
+.banner {
   width: 40%;
 }
+
 .left h1 {
   font-size: 85px;
   font-weight: 900;
@@ -89,6 +100,12 @@ nav {
   width: 500px;
 }
 @media only screen and (max-width: 767px) {
+  .left {
+    order: 2;
+  }
+  .right {
+    order: 1;
+  }
   .nav-button {
     display: none;
   }
