@@ -13,6 +13,7 @@ nav {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
+  position: fixed;
 }
 .site-title {
   display: flex;
@@ -38,6 +39,7 @@ nav {
 .nav-button li {
   cursor: pointer;
   font-weight: 400;
+  padding: 1px 10px;
 }
 .nav-button li:hover {
   color: #04aa6d;
@@ -145,4 +147,54 @@ nav {
 .services-title {
   font-size: 20px;
   font-weight: 600;
+}
+.projects-section {
+  margin: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.projects-section h1 {
+  color: #04aa6d;
+  font-size: 50px;
+}
+.project-boxes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 40px;
+  padding: 50px;
+  justify-items: center;
+}
+.box {
+  border-radius: 10px;
+  box-sizing: border-box;
+  height: 400px;
+  width: 400px;
+  text-align: center;
+  padding: 30px;
+  background-color: #9fe2bf;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+.more-button {
+  color: #04aa6d;
+  border: 2px solid#04aa6d;
+  border-radius: 5px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 10px 10px 10px 0;
+  cursor: pointer;
+  width: 180px;
+  height: 50px;
+}
+.more-button:hover {
+  text-align: center;
+  background-color: #04aa6d;
+  color: white;
+  transition: 0.5s;
 }
