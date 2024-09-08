@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <style>
+      #test {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .about-tab-buttons {
+        display: flex;
+        justify-content: start;
+      }
+      .tab {
+        margin-right: 30px;
+        font-size: 20px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+
+      .tab-links {
+        margin: 10px 40px 0 0;
+        font-size: 30px;
+        font-weight: 500;
+        cursor: pointer;
+      }
+      .tab-details {
+        margin-top: 10px;
+      }
+      .tab-details h5 {
+        margin-top: 30px;
+        font-size: 25px;
+        font-weight: 500;
+      }
+      .tab-details a {
+        text-decoration: none;
+        font-size: 18px;
+      }
+      #adress-details {
+      }
+      #education-details {
+      }
+      #experiences-details {
+      }
+    </style>
+    <div id="test">
+      <div class="about-tab-buttons">
+        <div id="adress" class="tab">Adress</div>
+        <div id="education" class="tab">Education</div>
+        <div id="experiences" class="tab">Experiences</div>
+      </div>
+      <div id="adress-details" class="tab-details" onclick="myFunction()">
+        <h5>Parmanent Adress</h5>
+        <a href=""
+          >Tonoy Villa <br />
+          MM Road, Gobindopur <br />
+          Alamdanga, Chuadanga</a
+        >
+        <h5>Present Adress</h5>
+        <a href=""
+          >Facebook mess<br />
+          Beside Iu Club <br />
+          Peyaratola, Kushtia</a
+        >
+      </div>
+      <div id="education-details" class="tab-details" onclick="myFunction2()">
+        <h5>HSC</h5>
+        <a href=""
+          >Khulna Public Collage<br />
+          Boyra, Khulna
+        </a>
+        <h5>Result</h5>
+        <p>GPA 5.00</p>
+        <h5>Graduation</h5>
+        <a href=""
+          >National University<br />
+          Bangladesh<br />
+        </a>
+        <button class="more-button">
+          Download Results <i class="fa-solid fa-download"></i>
+        </button>
+      </div>
+      <div id="experiences-details" class="tab-details" onclick="myFunction3()">
+        <h5>Worked As Itern</h5>
+        <a href=""
+          >Revish Tech Int.<br />
+          Dhaka Bangladesh <br />
+          for 1 year.
+        </a>
+        <h5>Working As JWD</h5>
+        <a href=""
+          >Junif Web Horeds <br />
+          Dhaka, Bangladesh</a
+        >
+      </div>
+    </div>
+    <button onclick="myFunction()">hide</button>
+    <script>
+      function myFunction() {
+        var x = document.getElementById("test");
+        if ((x.style.display = "none")) {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      }
+    </script>
+  </body>
+</html>

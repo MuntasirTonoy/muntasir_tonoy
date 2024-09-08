@@ -26,7 +26,7 @@
       <ul class="nav-button">
         <li><a href=""></a>HOME</li>
         <li><a href=""></a>ABOUT</li>
-        <li><a href=".services-section"></a>SERVICES</li>
+        <li><a href=""></a>SERVICES</li>
         <li><a href=""></a>PROJECTS</li>
         <li><a href=""></a>BLOGS</li>
         <li><a href=""></a>CONTACTS</li>
@@ -70,29 +70,55 @@
           web design and continuously learning to improve my skills, bringing
           creative ideas to life through code."
         </p>
-        <div class="about-nav-bar">
-          <div id="adress">Adress</div>
-          <div id="skills">Skills</div>
-          <div id="education">Education</div>
+        <div class="about-tab-buttons">
+          <div id="adress" class="tab" onclick="adrFunction()">Adress</div>
+          <div id="education" class="tab" onclick="eduFunction()">
+            Education
+          </div>
+          <div id="experiences" class="tab" onclick="expFunction()">
+            Experiences
+          </div>
         </div>
-        <div class="adress-details">
-          <h5>Parmanent Adress :</h5>
-          <p>
-            <a href="https://maps.app.goo.gl/DpReaqhLoxazdm5C7" target="blank"
-              >Tonoy's Villa <br />
-              MM Road, Gobindopur <br />
-              Alamdanga, Chuadanga</a
-            >
-          </p>
-          <h5>Present Adress :</h5>
-          <p>
-            <a href="https://maps.app.goo.gl/mejCAkwwUvemk66NA" target="blank">
-              Facebook Mess <br />
-              Iu Club Goli <br />
-              Gorosthanpara, Peyaratola <br />
-              Kushtia, 7000
-            </a>
-          </p>
+
+        <div id="adress-details" class="tab-details">
+          <h5>Parmanent Adress</h5>
+          <a href=""
+            >Tonoy Villa <br />
+            MM Road, Gobindopur <br />
+            Alamdanga, Chuadanga</a
+          >
+          <h5>Present Adress</h5>
+          <a href=""
+            >Facebook mess<br />
+            Beside Iu Club <br />
+            Peyaratola, Kushtia</a
+          >
+        </div>
+        <div id="education-details" class="tab-details">
+          <h5>HSC</h5>
+          <a href=""
+            >Khulna Public Collage<br />
+            Boyra, Khulna
+          </a>
+
+          <h5>Graduation</h5>
+          <a href=""
+            >National University<br />
+            Bangladesh<br />
+          </a>
+        </div>
+        <div id="experiences-details" class="tab-details">
+          <h5>Worked As Itern</h5>
+          <a href=""
+            >Revish Tech Int.<br />
+            Dhaka Bangladesh <br />
+            for 1 year.
+          </a>
+          <h5>Working As JWD</h5>
+          <a href=""
+            >Junif Web Horeds <br />
+            Dhaka, Bangladesh</a
+          >
         </div>
       </div>
     </div>
@@ -259,5 +285,22 @@
     <footer>
       <i class="fa-solid fa-copyright"></i>All Rights Reserved By Muntasir Tonoy
     </footer>
+    <script>
+      function adrFunction() {
+        document.getElementById("adress-details").style.display = "block";
+        document.getElementById("education-details").style.display = "none";
+        document.getElementById("experiences-details").style.display = "none";
+      }
+      function eduFunction() {
+        document.getElementById("adress-details").style.display = "none";
+        document.getElementById("education-details").style.display = "block";
+        document.getElementById("experiences-details").style.display = "none";
+      }
+      function expFunction() {
+        document.getElementById("adress-details").style.display = "none";
+        document.getElementById("education-details").style.display = "none";
+        document.getElementById("experiences-details").style.display = "block";
+      }
+    </script>
   </body>
 </html>
