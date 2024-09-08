@@ -301,6 +301,19 @@
           document.getElementById("experiences-details").style.display =
             "block";
         }
+        if (tabId === "adress") {
+          document.getElementById("adress").style.color = "#04aa6d";
+          document.getElementById("education").style.color = "black";
+          document.getElementById("experiences").style.color = "black";
+        } else if (tabId === "education") {
+          document.getElementById("adress").style.color = "black";
+          document.getElementById("experiences").style.color = "black";
+          document.getElementById("education").style.color = "#04aa6d";
+        } else if (tabId === "experiences") {
+          document.getElementById("adress").style.color = "black";
+          document.getElementById("experiences").style.color = "#04aa6d";
+          document.getElementById("education").style.color = "black";
+        }
       }
     </script>
   </body>
