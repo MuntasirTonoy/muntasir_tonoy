@@ -54,9 +54,6 @@ nav {
   margin: 0 30px;
   display: none;
 }
-.mood-switch:hover {
-  color: #03a66a;
-}
 
 .section {
   margin: 100px 50px;
@@ -161,12 +158,8 @@ nav {
   font-weight: 500;
   cursor: pointer;
 }
-
-.tab-links {
-  margin: 10px 40px 0 0;
-  font-size: 30px;
-  font-weight: 500;
-  cursor: pointer;
+#adress {
+  color: #03a66a;
 }
 .tab-details {
   margin-top: 10px;
@@ -179,6 +172,7 @@ nav {
 .tab-details a {
   text-decoration: none;
   font-size: 18px;
+  color: black;
 }
 #adress-details {
 }
