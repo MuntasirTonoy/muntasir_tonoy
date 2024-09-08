@@ -71,11 +71,11 @@
           creative ideas to life through code."
         </p>
         <div class="about-tab-buttons">
-          <div id="adress" class="tab" onclick="adrFunction()">Adress</div>
-          <div id="education" class="tab" onclick="eduFunction()">
+          <div id="adress" class="tab" onclick="showTab('adress')">Adress</div>
+          <div id="education" class="tab" onclick="showTab('education')">
             Education
           </div>
-          <div id="experiences" class="tab" onclick="expFunction()">
+          <div id="experiences" class="tab" onclick="showTab('experiences')">
             Experiences
           </div>
         </div>
@@ -286,20 +286,21 @@
       <i class="fa-solid fa-copyright"></i>All Rights Reserved By Muntasir Tonoy
     </footer>
     <script>
-      function adrFunction() {
-        document.getElementById("adress-details").style.display = "block";
-        document.getElementById("education-details").style.display = "none";
-        document.getElementById("experiences-details").style.display = "none";
-      }
-      function eduFunction() {
-        document.getElementById("adress-details").style.display = "none";
-        document.getElementById("education-details").style.display = "block";
-        document.getElementById("experiences-details").style.display = "none";
-      }
-      function expFunction() {
-        document.getElementById("adress-details").style.display = "none";
-        document.getElementById("education-details").style.display = "none";
-        document.getElementById("experiences-details").style.display = "block";
+      function showTab(tabId) {
+        if (tabId === "adress") {
+          document.getElementById("adress-details").style.display = "block";
+          document.getElementById("education-details").style.display = "none";
+          document.getElementById("experiences-details").style.display = "none";
+        } else if (tabId === "education") {
+          document.getElementById("adress-details").style.display = "none";
+          document.getElementById("education-details").style.display = "block";
+          document.getElementById("experiences-details").style.display = "none";
+        } else if (tabId === "experiences") {
+          document.getElementById("adress-details").style.display = "none";
+          document.getElementById("education-details").style.display = "none";
+          document.getElementById("experiences-details").style.display =
+            "block";
+        }
       }
     </script>
   </body>
