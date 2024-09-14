@@ -46,13 +46,58 @@ nav {
 .nav-button li:hover {
   color: #03a66a;
 }
-.mood-switch {
-  color: black;
-  font-size: 30px;
-}
-.mood-switch .fa-bars {
-  margin: 0 30px;
+
+/* ---------hamburger------ */
+.hamburger {
   display: none;
+}
+#checkbox {
+  display: none;
+}
+
+.toggle {
+  margin: 0px 20px;
+  position: relative;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  transition-duration: 0.3s;
+}
+
+.bars {
+  width: 100%;
+  height: 4px;
+  background-color: black;
+  border-radius: 5px;
+  transition-duration: 0.3s;
+}
+
+#checkbox:checked + .toggle .bars {
+  margin-left: 13px;
+}
+
+#checkbox:checked + .toggle #bar2 {
+  transform: rotate(135deg);
+  margin-left: 0;
+  transform-origin: center;
+  transition-duration: 0.3s;
+}
+
+#checkbox:checked + .toggle #bar1 {
+  transform: rotate(45deg);
+  transition-duration: 0.3s;
+  transform-origin: left center;
+}
+
+#checkbox:checked + .toggle #bar3 {
+  transform: rotate(-45deg);
+  transition-duration: 0.3s;
+  transform-origin: left center;
 }
 
 .section {
@@ -90,27 +135,42 @@ nav {
 .right-side img {
   height: 600px;
 }
-.buttons {
-  padding: 30px 10px;
-}
 .buttons button {
-  background-color: #03a66a;
-  border: none;
-  border-radius: 5px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-    rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
   display: inline-block;
+  margin: 20px 10px 20px 0;
+  padding: 0.6rem 1.5rem;
   font-size: 16px;
-  margin: 10px 10px 10px 0;
+  font-weight: 600;
+  color: #03a66a;
+  border: 3px solid #03a66a;
+  border-radius: 6px;
   cursor: pointer;
+  position: relative;
+  background-color: transparent;
+  text-decoration: none;
+  overflow: hidden;
+  z-index: 1;
+  font-family: inherit;
 }
-.buttons button:hover {
-  background-color: rgb(0, 116, 85);
-  transition: 0.5s;
+
+button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #03a66a;
+  transform: translateX(-100%);
+  transition: all 0.3s;
+  z-index: -1;
+}
+
+button:hover::before {
+  transform: translateX(0);
+}
+button:hover {
+  color: white;
 }
 .about {
   display: flex;
@@ -158,6 +218,7 @@ nav {
   font-weight: 500;
   cursor: pointer;
 }
+
 #adress {
   color: #03a66a;
 }
@@ -255,8 +316,7 @@ nav {
   text-align: center;
   padding: 30px;
   background-color: #9fe2bf;
-
-  transition: 0.5s;
+  transition: 0.5s ease;
 }
 .project-box-item:hover {
   transform: scale(1.05);
@@ -274,12 +334,12 @@ nav {
   font-size: 16px;
   margin: 10px 10px 10px 0;
   cursor: pointer;
+  transition: 0.5s ease;
 }
 .more-button:hover {
   text-align: center;
   background-color: #03a66a;
   color: white;
-  transition: 0.5s;
 }
 .blog {
   display: flex;
@@ -371,8 +431,14 @@ nav {
   border: none;
   border-radius: 5px;
   height: 50px;
+  transition: 0.5s ease;
 }
-
+input:focus {
+  outline: none;
+  border-color: rgba(129, 140, 248);
+  background-color: #fff;
+  box-shadow: 0 0 0 2px #03a66a;
+}
 #message {
   height: 130px;
 }
@@ -398,25 +464,25 @@ nav {
   text-decoration: none;
   color: black;
 }
-.link a:hover {
+.link:hover {
   color: #03a66a;
 }
 footer {
   text-align: center;
   font-size: 16px;
   color: #03a66a;
+  margin-bottom: 30px;
 }
 /* --------resposive for mobile------- */
 @media only screen and (max-width: 760px) {
   nav {
     justify-content: space-between;
   }
-  .mood-switch .fa-bars {
-    display: block;
+  .toggle {
+    display: inline-flex;
+    flex-direction: column;
   }
-  .mood-switch {
-    display: flex;
-  }
+
   .site-name {
     display: none;
   }
