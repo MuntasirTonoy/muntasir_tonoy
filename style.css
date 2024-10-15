@@ -7,8 +7,31 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
-
+.goto-up {
+  box-sizing: border-box;
+  background-color: #03a66a;
+  height: 50px;
+  width: 50px;
+  right: 30px;
+  bottom: 30px;
+  position: fixed;
+  border-radius: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.goto-up i {
+  color: white;
+  font-size: 30px;
+}
+.goto-up:hover i {
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
 nav {
   background-color: #eeeee4;
   height: 60px;
@@ -222,7 +245,7 @@ nav {
 }
 .right-side img {
   height: 600px;
-  border-radius: 50% 20% / 10% 40%;
+  border-radius: 50% 20% / 10% 50%;
 }
 .buttons button {
   display: inline-block;
@@ -242,7 +265,7 @@ nav {
   font-family: inherit;
 }
 
-button::before {
+/* button::before {
   content: "";
   position: absolute;
   left: 0;
@@ -253,7 +276,7 @@ button::before {
   transform: translateX(-100%);
   transition: all 0.3s;
   z-index: -1;
-}
+} */
 
 button:hover::before {
   transform: translateX(0);
@@ -733,5 +756,21 @@ footer {
   }
   .form {
     margin: 30px 0;
+  }
+}
+
+/* scroll animation */
+.section {
+  animation: appear linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 40%;
+}
+@keyframes appear {
+  from {
+    opacity: 0;
+    scale: 0.4;
+  }
+  to {
+    opacity: 1;
   }
 }
