@@ -17,9 +17,8 @@
     <title>Muntasir Tonoy</title>
   </head>
   <body>
-    <div class="goto-up"><i class="fa-solid fa-angle-up"></i></div>
     <!-- -------navigationn section----------- -->
-    <nav>
+    <nav id="top-sec">
       <div class="site-title">
         <img class="site-logo" src="images/site-logo.png" alt="" />
         <h1 class="site-name">MUNTASIR TONOY</h1>
@@ -74,6 +73,10 @@
       <div class="right-side">
         <img src="images/my.jpg" alt="owner-photo" />
       </div>
+    </div>
+
+    <div class="goto-up">
+      <a href="#top-sec"><i class="fa-solid fa-angle-up"></i></a>
     </div>
     <!-- ---------about section------ -->
     <div class="about section">
@@ -305,6 +308,15 @@
       <i class="fa-solid fa-copyright"></i>All Rights Reserved By Muntasir Tonoy
     </footer>
     <script>
+      const goToUp = document.querySelector(".goto-up");
+
+      window.addEventListener("scroll", () => {
+        if (window.pageYOffset > 200) {
+          goToUp.classList.add("active");
+        } else {
+          goToUp.classList.remove("active");
+        }
+      });
       function showTab(tabId) {
         if (tabId === "adress") {
           document.getElementById("adress-details").style.display = "block";
