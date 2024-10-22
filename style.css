@@ -485,6 +485,7 @@ button:hover {
 }
 .blog-box-item {
   width: 300px;
+  height: 460px;
   position: relative;
   overflow: hidden;
   border-radius: 10px;
@@ -492,7 +493,7 @@ button:hover {
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 .blog-box-item img {
-  width: 300px;
+  height: 100%;
   display: block;
   border-radius: 10px;
   transition: 0.5s;
@@ -503,9 +504,9 @@ button:hover {
 .blog-layer {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: center;
-  height: 0;
+  height: 0%;
   padding: 0 20px;
   color: white;
   text-align: center;
@@ -520,8 +521,9 @@ button:hover {
   height: 100%;
 }
 .blog-layer h4 {
+  margin-bottom: 20px;
   font-size: 30px;
-  max-height: 40px;
+  max-height: 100px;
   overflow: hidden;
 }
 .blog-layer p {
